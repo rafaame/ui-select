@@ -3,10 +3,10 @@
     <span ng-show="$select.isEmpty()" class="text-muted">{{$select.placeholder}}</span>
     <span ng-hide="$select.isEmpty()" ng-transclude=""></span>
   </button>
-  <button class="btn btn-default col-xs-1 col-sm-10" ng-if="$select.allowClear && !$select.isEmpty()" ng-click="$select.select(undefined)">
+  <button class="btn btn-default col-xs-11 col-sm-10" ng-if="$select.allowClear && !$select.isEmpty()" ng-click="$select.select(undefined)">
     <span class="glyphicon glyphicon-remove ui-select-toggle"></span>
   </button>
-  <button class="btn btn-default col-sm-2" ng-click="$select.activate()">
+  <button class="btn btn-default col-xs-1 col-sm-2" ng-click="$select.activate()">
     <span class="caret ui-select-toggle" ng-click="$select.toggle($event)"></span>
   </button>
 </div>
