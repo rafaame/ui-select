@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.9.6 - 2015-01-24T18:06:55.136Z
+ * Version: 0.9.6 - 2015-01-25T10:24:04.724Z
  * License: MIT
  */
 
@@ -521,7 +521,7 @@
 
     ctrl.getPlaceholder = function(){
       //Refactor single?
-      if(ctrl.multiple && ctrl.selected.length) return;
+      if(ctrl.multiple && ctrl.selected && ctrl.selected.length) return;
       return ctrl.placeholder;
     };
 
