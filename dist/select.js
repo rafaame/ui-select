@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.9.6 - 2015-01-25T10:26:20.986Z
+ * Version: 0.9.6 - 2015-01-25T10:30:00.088Z
  * License: MIT
  */
 
@@ -297,7 +297,7 @@
           } else {
             if (ctrl.multiple){
               //Remove already selected items (ex: while searching)
-              var filteredItems = items.filter(function(i) {return ctrl.selected.indexOf(i) < 0;});
+              var filteredItems = items.filter(function(i) {return !ctrl.selected || ctrl.selected.indexOf(i) < 0;});
               setItemsFn(filteredItems);
             }else{
               setItemsFn(items);
@@ -313,11 +313,11 @@
         //Remove already selected items
         $scope.$watchCollection('$select.selected', function(selectedItems){
           var data = ctrl.parserResult.source($scope);
-          if (!selectedItems.length) {
+          if (!selectedItems || !selectedItems.length) {
             setItemsFn(data);
           }else{
             if ( data !== undefined ) {
-              var filteredItems = data.filter(function(i) {return selectedItems.indexOf(i) < 0;});
+              var filteredItems = data.filter(function(i) {return !selectedItems || selectedItems.indexOf(i) < 0;});
               setItemsFn(filteredItems);
             }
           }
