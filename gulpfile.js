@@ -68,8 +68,8 @@ gulp.task('scripts', ['clean'], function() {
       timestamp: (new Date()).toISOString(), pkg: config.pkg
     }))
     .pipe(gulp.dest('dist'))
-    .pipe(uglify({preserveComments: 'some'}))
-    .pipe(rename({ext:'.min.js'}))
+    //.pipe(uglify({preserveComments: 'some'}))
+    .pipe(rename({ext:'.js'}))
     .pipe(gulp.dest('dist'));
 
 });
