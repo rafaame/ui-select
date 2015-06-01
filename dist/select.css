@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.9.6 - 2015-01-25T10:30:00.093Z
+ * Version: 0.9.6 - 2015-06-01T12:44:05.675Z
  * License: MIT
  */
 
@@ -94,7 +94,6 @@
 
 .ui-select-bootstrap .ui-select-toggle > .caret {
   position: absolute;
-  height: 100%;
   top: 50%;
   right: 10px;
   margin-top: -2px;
